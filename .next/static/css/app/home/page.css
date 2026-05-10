@@ -1,0 +1,96 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./src/styles/Navbar.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+/* src/components/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem ;
+    color: white;
+  }
+  
+  .navbar .logo, .profile {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .nav-links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+    width: 50%;
+  }
+  
+  .nav-links li {
+    width: 100%;
+  }
+  
+  .nav-links a {
+    color: black;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-links a:hover {
+    background-color:  #b62547;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .search-container{
+    border: #b62547 2px solid;
+    border-radius: 20px;
+    width: 50%;
+    height: 40px;
+    margin: auto;
+    cursor: pointer;
+  }
+  
+  .searchItem{
+    width: 90%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+  }
+
+  .fa-magnifying-glass{
+    color: gray;
+  }
+
+  .fa-cart-shopping{
+    font-size: 1rem;
+  }
+
+  .cart-icon {
+    position: relative;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 7px;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+  
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./src/styles/CardItem.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+.card_item:hover{
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+
+}
