@@ -1,10 +1,10 @@
-import '../styles/globals.css';
+import "../styles/globals.css";
 
 export const metadata = {
-  title: 'RUVEE Shop',
-  description: 'RUVEE Shop - Your fashion destination',
+  title: "RUVEE Shop",
+  description: "RUVEE Shop - Your fashion destination",
   icons: {
-    icon: '/favicon_ruvee.png',
+    icon: "/favicon/favicon_ruvee.png",
   },
 };
 
