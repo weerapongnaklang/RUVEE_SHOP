@@ -1,27 +1,28 @@
-"use client";
-import { useRouter } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function WelcomePage() {
-  const router = useRouter();
-
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-200">
+    <main className="flex justify-center items-center h-screen bg-gray-200">
       <div className="text-center">
         <h1 className="text-3xl font-bold mb-5">
           Welcome to{" "}
-          <img
+          <Image
             src="/images/logo_Ruvee.png"
             alt="Ruvee"
-            className="inline w-24"
+            width={375}
+            height={104}
+            priority
+            className="inline w-24 h-auto"
           />
         </h1>
-        <button
-          onClick={() => router.push("/home")}
-          className="px-12 py-4 text-white rounded-full bg-[#ae2019] hover:bg-[#9b1c1c] transition duration-300"
+        <Link
+          href="/home"
+          className="inline-block px-12 py-4 text-white rounded-full bg-[#ae2019] hover:bg-[#9b1c1c] transition duration-300"
         >
           SHOPPING NOW
-        </button>
+        </Link>
       </div>
-    </div>
+    </main>
   );
 }

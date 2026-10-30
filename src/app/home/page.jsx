@@ -1,24 +1,25 @@
-'use client';
-import { useEffect, useState } from 'react';
-import Navbar from '../../components/Navbar';
-import CardItem from '../../components/CardItem';
-import productData from '../../data/product';
+import Navbar from "../../components/Navbar";
+import CardItem from "../../components/CardItem";
+import supabase from "../../lib/supabase";
 
-export default function HomePage() {
-  const [product, setProduct] = useState([]);
+export const dynamic = "force-dynamic";
 
-  useEffect(() => {
-    setProduct(productData);
-  }, []);
+export default async function HomePage() {
+  const { data: products, error } = await supabase
+    .from("catalog_items")
+    .select("*")
+    .order("id");
 
+  if (error) console.error(error);
+console.log("Products fetched:", products?.length ?? 0);
   return (
     <div>
       <Navbar />
-      <div className="flex flex-wrap justify-center items-center">
-        {product.map((item) => (
-          <CardItem key={item.id} item={item} />
+      <main className="flex flex-wrap justify-center items-center">
+        {(products ?? []).map((item, index) => (
+          <CardItem key={item.id} item={item} priority={index < 3} />
         ))}
-      </div>
+      </main>
     </div>
   );
 }

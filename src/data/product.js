@@ -1,7 +1,7 @@
-const Product = [
+const products = [
   {
     id: 1,
-    unitprice: 1000,
+    unitPrice: 1000,
     discount: 0,
     name: "RAWIT Bag",
     image: "/images/rawit_black.jpg",
@@ -15,7 +15,7 @@ const Product = [
   },
   {
     id: 2,
-    unitprice: 1000,
+    unitPrice: 1000,
     discount: 0,
     name: "RAWIT Bag",
     image: "/images/rawit_green.jpg",
@@ -29,10 +29,10 @@ const Product = [
   },
   {
     id: 3,
-    unitprice: 1000,
+    unitPrice: 1000,
     discount: 0,
     name: "RAWIT Bag",
-    image: "/images/rawit_brown.png",
+    image: "/images/rawit_brown.jpg",
     description: "a day bag",
     category: "bag",
     stock: 10,
@@ -43,4 +43,4 @@ const Product = [
   },
 ];
 
-export default Product;
+export default products;
