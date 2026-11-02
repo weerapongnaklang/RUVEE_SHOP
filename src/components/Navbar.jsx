@@ -1,18 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CartIcon, SearchIcon } from "./icons";
+import ProfileDrawer from "./ProfileDrawer";
 
 const navLinkClass =
-  "block px-4 py-2 text-black rounded-[20px] transition-all duration-200 ease-in-out hover:bg-[#b62547] hover:text-white hover:shadow-md";
+  "block px-4 py-2 text-ink rounded-[20px] transition-all duration-200 ease-in-out hover:bg-brand hover:text-on-brand hover:shadow-md";
 
 const Navbar = () => {
   const cartCount = 0;
 
   return (
     <>
-      <nav aria-label="Main" className="flex justify-between items-center p-2">
-        <Link href="/" aria-label="RUVEE home">
+      <nav
+        id="main-nav"
+        aria-label="Main"
+        className="flex justify-between items-center p-2"
+      >
+        <Link id="nav-logo-link" href="/home" aria-label="RUVEE home">
           <Image
+            id="nav-logo"
             src="/images/logo_Ruvee.png"
             alt="Ruvee"
             width={375}
@@ -20,52 +26,62 @@ const Navbar = () => {
             className="w-20 h-auto"
           />
         </Link>
-        <ul className="flex items-center gap-4 w-1/2 m-0 p-0 list-none">
+        <ul
+          id="nav-menu"
+          className="flex items-center gap-4 w-1/2 m-0 p-0 list-none"
+        >
           <li className="w-full">
-            <a href="#about" className={navLinkClass}>
+            <a id="nav-about-link" href="#about" className={navLinkClass}>
               About
             </a>
           </li>
           <li className="w-full">
-            <a href="#services" className={navLinkClass}>
+            <a
+              id="nav-services-link"
+              href="#services"
+              className={navLinkClass}
+            >
               Services
             </a>
           </li>
           <li className="w-full">
-            <a href="#contact" className={navLinkClass}>
+            <a
+              id="nav-contact-link"
+              href="#contact"
+              className={navLinkClass}
+            >
               Contact
             </a>
           </li>
           <li className="relative w-full">
             <button
+              id="cart-button"
               type="button"
               aria-label={`Cart, ${cartCount} items`}
               className={`${navLinkClass} flex items-center cursor-pointer`}
             >
               <CartIcon className="w-4 h-4" />
               {cartCount > 0 && (
-                <span className="absolute -top-1 right-1 bg-red-500 text-white text-xs font-bold px-[7px] py-0.5 rounded-full">
+                <span
+                  id="cart-count"
+                  className="absolute -top-1 right-1 bg-badge text-on-brand text-xs font-bold px-[7px] py-0.5 rounded-full"
+                >
                   {cartCount}
                 </span>
               )}
             </button>
           </li>
-          <li>
-            <Image
-              src="/images/profile.png"
-              alt="Profile"
-              width={750}
-              height={750}
-              className="w-10 h-auto"
-            />
+          <li className="shrink-0">
+            <ProfileDrawer />
           </li>
         </ul>
       </nav>
       <div
+        id="search-bar"
         role="search"
-        className="flex justify-center items-center w-1/2 h-10 mx-auto border-2 border-[#b62547] rounded-[20px]"
+        className="flex justify-center items-center w-1/2 h-10 mx-auto border-2 border-brand rounded-[20px]"
       >
-        <SearchIcon className="w-4 h-4 ml-4 text-gray-500" />
+        <SearchIcon className="w-4 h-4 ml-4 text-ink-subtle" />
         <label htmlFor="search" className="sr-only">
           Search products
         </label>

@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+/* Design tokens: colours. Each token becomes a Tailwind utility, e.g. bg-brand, text-ink-muted. */
+@theme inline {
+  /* Brand */
+  --color-brand: #b62547;
+  --color-brand-hover: #9d1f3c;
+  --color-cta: #ae2019;
+  --color-cta-hover: #9b1c1c;
+
+  /* Surfaces */
+  --color-surface: #fff;
+  --color-page: var(--color-gray-200);
+
+  /* Text */
+  --color-ink: #000;
+  --color-ink-muted: var(--color-gray-600);
+  --color-ink-subtle: var(--color-gray-500);
+  --color-on-brand: #fff;
+
+  /* Status */
+  --color-price: var(--color-red-500);
+  --color-badge: var(--color-red-500);
+}
